@@ -200,7 +200,7 @@ td .btn {
 
   /* Add new employee */
 
-form.add-new {
+form.add-new ,form.update {
   padding: 50px;
   width: 100%;
   display: flex;
@@ -211,16 +211,16 @@ form.add-new {
   margin-bottom: 25px;
 }
 
-form.add-new > * {
+form.add-new > * ,form.update > * {
   margin-bottom: 10px;
   flex-grow: 1;
 }
 
-.add-new input {
+.add-new input , .update input {
   width:60%;
   padding-left: 15px;
   text-align: left;
-  
+
 }
 
 
@@ -234,7 +234,7 @@ form.add-new > * {
   form.add-new {
     padding: 20px;
   }
-  .add-new h2 {
+  .add-new h2,.update h2 {
     font-size: 1.2rem;
   }
 }

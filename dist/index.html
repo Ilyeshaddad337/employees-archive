@@ -29,7 +29,7 @@
                         <th>Name</th>
                         <th>Age</th>
                         <th>Occupation</th>
-                        <th>Actions</th>
+                        <th>Delete</th>
                     </thead>
                     <tbody class="msgs">
                      
@@ -37,6 +37,29 @@
                 </table>
             </div>
         </div>
+    </div>
+     
+    <div class="container">
+        <form class="update">
+            <h2>Update an employee</h2>
+            <div class="info">
+                <label for="id">Employer ID :</label>
+                <input type="text" name="id" placeholder="Enter the Id" required>
+            </div>
+            <div class="info">
+                <label for="name">the name :</label>
+                <input  placeholder="Enter name.." type="text" name="name"  >
+            </div>
+            <div class="info">
+                <label for="age">the age :</label>
+                <input placeholder="Enter age.."  type="text" name="age" >
+            </div>
+            <div class="info">
+                <label for="occupation">occupation :</label>
+                <input placeholder="Enter occup.."  type="text" name="occupation" >
+             </div>
+             <button class="add-btn btn" name="add">Add New</button>
+        </form>
     </div>
     <div class="container">
         <form class="add-new">
@@ -53,7 +76,7 @@
                 <label for="occupation">occupation :</label>
                 <input placeholder="Enter occup.."  type="text" name="occupation" required>
              </div>
-             <button class="add-btn btn" name="add">Add New</button>
+             <button class="add-btn btn" name="add">Update</button>
         </form>
     </div>
     <div class="footer">
