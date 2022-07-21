@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.hide {
+  display: none;
+}
 
 body {
     display: flex;
@@ -89,7 +91,7 @@ form {
     text-align: center;
 
 }
-.btn:focus , form input:focus {
+.btn:focus , form input:focus, form select:focus {
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,
      rgba(50, 50, 93, .2) 0 6px 15px 0,
      rgba(0, 0, 0, .1) 0 2px 2px 0, 
@@ -104,7 +106,7 @@ td .del-btn:hover {
 .search .add-btn:hover {
     background-color: #065143;
 }
-form input {
+form input ,form select {
     padding: .4rem;
     outline: none;
     margin-right: 0.259rem;
@@ -115,11 +117,22 @@ form input {
     transition:box-shadow .08s ease-in;
 
 }
-
+form select {
+  font-weight: bold;
+  flex-basis:15%;
+}
 @media only screen and (max-width:768px) {
     form input {
-        flex: 1 0 75%;
+        flex: 1 0 70%;
     }
+    form select {
+      flex : 1 0 15%
+    }
+}
+@media only screen and (max-width:390px) {
+  form select {
+    flex : 1 0 100%
+  }
 }
 /* End of styling the form */
 
@@ -143,8 +156,15 @@ table thead{
     top:0px;
 }
 table th ,table td{
-    padding: 0.925rem 1.925rem;
-    
+    padding: 0.925rem 1.725rem;
+    max-width:18ch ;
+
+}
+td {
+  word-break: break-word;
+}
+td.id-cell {
+  min-width: 10ch;
 }
 th {
     cursor: pointer;
@@ -159,6 +179,7 @@ td .btn {
 
 
 
+
  @media only screen and (max-width: 620px) {
     body table th,body table td  {
       padding: 0.678rem 1.04567rem;
@@ -166,15 +187,10 @@ td .btn {
     body .results{
         flex-basis: 350px;
     }
-  }
-/*
-  @media only screen and (max-width: 510px) {
-    body table th,body table td  {
-      padding: 0.378rem 0.34567rem;
+    table td, table th {
+      word-break: normal;
+    }
+    td.id-cell {
+      word-break: break-word ;
     }
   }
-  @media only screen and (max-width: 370px) {
-    body table th,body table td  {
-      padding: 0.478rem 0.24567rem;
-    }
-  } */

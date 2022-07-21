@@ -1,29 +1,18 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
-import * as firestore from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
+import {db } from './modules/config.js'
+import getDb from './modules/fetch-db.js'
+import insertInTable from './modules/insert.js'
+import search from './modules/search.js'
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDJaoHTHlXL8Tl9_DkmTYJEMplBRwiqCqU",
-  authDomain: "live-chat-ri.firebaseapp.com",
-  databaseURL: "https://live-chat-ri-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "live-chat-ri",
-  storageBucket: "live-chat-ri.appspot.com",
-  messagingSenderId: "908965445767",
-  appId: "1:908965445767:web:6f43ec34d95f04832f7822",
-  measurementId: "G-LC82HSL0SF"
-};
+var employees = await getDb(db)
+const tbody  = document.querySelector('.msgs')
+const input = document.querySelector('input')
+console.log(employees.length);
 
-const app = initializeApp(firebaseConfig);
-const db = firestore.getFirestore(app)
 
-function getData() {
-  var employeesRef = firestore.collection(db,'employees')
-  let snapshot = await firestore.getDocs(employeesRef)
-  var container = document.querySelector('.msgs')
-  snapshot.forEach(doc => {
-      let li = document.createElement('li')
-      li.innerHTML = doc.data().text
-      li.setAttribute('id',doc.id)
+insertInTable(tbody,employees)
 
-      container.appendChild(li)
-  });
-}
+input.addEventListener('input', (e) => {
+    const tbodyy  = document.querySelector('.msgs')
+    const sel = document.querySelector('select')
+    search(e,tbodyy,sel)
+})
