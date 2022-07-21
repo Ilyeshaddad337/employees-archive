@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    width: 100%;
+    height: 100vh;  
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+  /* Small */
+  
+  @media only screen and (min-width: 768px) {
+    body .container {
+      min-width: 85%;
+    }
+  }
+  /* Medium */
+  @media only screen and (min-width: 992px) {
+    body .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media only screen and (min-width: 1200px) {
+    body .container {
+      width: 1170px;
+    }
+  }
+
+  .container {
+    padding: 0 15px;
+    margin:0 auto;
+  }
+
+/* Finishing the rests */
+/* styling the form */
+.btn {
+    appearance: button;
+    text-decoration: none;
+    backface-visibility: hidden;
+    background-color: #415a77;
+    font-weight: bold;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    height: 34px;
+    outline: none;
+    overflow: hidden;
+    padding: 5px 20px;
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-align: center;
+
+}
+.btn:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,
+     rgba(50, 50, 93, .2) 0 6px 15px 0,
+     rgba(0, 0, 0, .1) 0 2px 2px 0, 
+     rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+form input {
+    padding: .4rem;
+    outline: none;
+    margin-right: 0.259rem;
+    border:1px solid #595a4abb;
+    text-align: center;
+    border-radius: 0.2597rem;
+}
+
+/* End of styling the form */
+
+/* the table  */
+.container table {
+    border: solid 1.5px #333;
+    border-collapse: collapse;
+    border-radius: 1.2rem;
+}
+table thead{
+    background-color: #1b263b;
+    color: aliceblue;
+    
+}
+table th ,table td{
+    padding: 0.925rem 1.925rem;
+    
+}
+
+table tr:nth-child(odd) {
+    background-color: #778da931;
+}
+
+td .btn {
+    padding: 5px 10px;
+}
+td .del-btn {
+    margin-top: 5px;
+}

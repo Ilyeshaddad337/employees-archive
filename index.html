@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>firebase</title>
+</head>
+<body>
+    <div class="container">
+        <div class="data">
+            <form class="search" action="">
+                <input type="text" name="search-value" >
+                <button class="search-btn btn">Search</button>
+                <button class="add-btn btn">Add New</button>
+            </form>
+            <div class="results">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Occupation</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody class="msgs">
+                        <tr>
+                            <td>001</td>
+                            <td>Ilyes Haddad</td>
+                            <td>12</td>
+                            <td>Frontend Master</td>
+                            <td><button class="btn updt-btn">Update</button> <button class="btn del-btn">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
