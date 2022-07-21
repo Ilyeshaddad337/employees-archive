@@ -9,12 +9,13 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
     width: 100%;
-    height: 100vh;  
+    padding-top: 70px;
   }
 
   .data {
@@ -31,35 +32,34 @@ body {
   
   @media only screen and (max-width: 768px) {
     body .container {
-      flex-basis: 95%;
       max-width: 95%;
     }
   }
   /* Medium */
   @media only screen and (min-width: 992px) {
     body .container {
-      flex-basis: 970px;
+      width: 970px;
     }
   }
   /* Large */
   @media only screen and (min-width: 1200px) {
     body .container {
-      flex-basis: 1170px;
+      width: 1170px;
     }
   }
 
   .container {
     padding: 0 15px;
     margin:0 auto;
-    max-height: 80vh;
   }
 h2 {
   letter-spacing: 3px;
+  padding-bottom: 25px;
 }
 /* Finishing the rests */
 /* styling the form */
 
-form {
+form.search  {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -103,7 +103,7 @@ form {
 td .del-btn:hover {
     background-color: #96031a;
 }
-.search .add-btn:hover {
+.add-new .add-btn:hover {
     background-color: #065143;
 }
 form input ,form select {
@@ -113,24 +113,26 @@ form input ,form select {
     border:1px solid #595a4abb;
     text-align: center;
     border-radius: 0.2597rem;
-    flex-basis: 40%;
     transition:box-shadow .08s ease-in;
 
 }
-form select {
+.search input {
+  flex-basis: 40%;
+}
+.search select {
   font-weight: bold;
   flex-basis:15%;
 }
 @media only screen and (max-width:768px) {
-    form input {
+    .search input {
         flex: 1 0 70%;
     }
-    form select {
+    .search select {
       flex : 1 0 15%
     }
 }
 @media only screen and (max-width:390px) {
-  form select {
+  .search select {
     flex : 1 0 100%
   }
 }
@@ -141,7 +143,7 @@ form select {
     overflow: auto;
     flex-basis:450px;
     max-width: 95%;
-
+    margin-bottom: 20px;
 }
 .container table {
     border-collapse: collapse;
@@ -194,3 +196,69 @@ td .btn {
       word-break: break-word ;
     }
   }
+
+
+  /* Add new employee */
+
+form.add-new {
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  border: solid  1px #595a4abb ;
+  margin-bottom: 25px;
+}
+
+form.add-new > * {
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.add-new input {
+  width:60%;
+  padding-left: 15px;
+  text-align: left;
+  
+}
+
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  form.add-new {
+    padding: 20px;
+  }
+  .add-new h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+.footer {
+  background-color: #333;
+  width: 100%;
+  height:35px;
+  font-size: 0.85em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+a{ 
+  text-decoration: none;
+
+}
+.owner {
+  color: aqua;
+  font-size: 1.1rem;
+}

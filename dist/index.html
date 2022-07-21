@@ -8,6 +8,7 @@
     <title>firebase</title>
 </head>
 <body>
+    
     <div class="container">
         <div class="data">
             <h2>Employees Archive</h2>
@@ -20,8 +21,6 @@
                     <option value="Age">Age</option>
                     <option value="Occupation">Occupation</option>
                 </select>
-
-                <button class="add-btn btn">Add New</button>
             </form>
             <div class="results">
                 <table>
@@ -38,6 +37,27 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <form class="add-new">
+            <h2>Add a new employee</h2>
+            <div class="info">
+                <label for="name">the name :</label>
+                <input  placeholder="Enter name.." type="text" name="name" required >
+            </div>
+            <div class="info">
+                <label for="age">the age :</label>
+                <input placeholder="Enter age.."  type="text" name="age" required>
+            </div>
+            <div class="info">
+                <label for="occupation">occupation :</label>
+                <input placeholder="Enter occup.."  type="text" name="occupation" required>
+             </div>
+             <button class="add-btn btn" name="add">Add New</button>
+        </form>
+    </div>
+    <div class="footer">
+        <span>All rights reserved to <a href="https://mostaql.com/u/ilyeshaddad337" class="owner">Ilyes_haddad</a></span>
     </div>
   <script type="module" src="main-bundle.js"></script>
 </body>
